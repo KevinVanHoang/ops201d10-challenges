@@ -26,5 +26,5 @@ for ($i = 1; $i -le 10; $i++) {
 Get-Process -Name "notepad" | ForEach-Object { $_.CloseMainWindow() }
 
 # Kill a process by its Process Identification Number. Choose a process whose termination won’t destabilize the system, such as Google Chrome or MS Edge.
-# For example peplace "12345" with the actual PID of the process you want to terminate.
+# For example replace "12345" with the actual PID of the process you want to terminate.
 Stop-Process -Id 12345 -Force
