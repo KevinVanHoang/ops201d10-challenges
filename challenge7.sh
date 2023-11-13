@@ -66,7 +66,15 @@ system_comp_info() {
     echo "____*__*_***_-_* $cmponent *_-_***_*__*_____"
     lshw -c $cmponent | grep -E "description|vendor|physical id|bus info|width|clock|capabilities|configuration|resources|logical name|version|serial|size|capacity"
     echo
-}
+
+}  
+    # echo "Computer Name: $computer_name"
+    # lshw -class CPU | grep "product\|vendor\|physical\|bus\|width"
+    #     lshw -class RAM | grep "description\|physical\|size"
+    #         lshw -class DISPLAY | grep "description\|vendor\|physical\|bus\|width|bus\"
+   
+
+echo "Computer name: $(hostname)"
 
 # Display systems's information for each cmponent
 system_comp_info "system"
@@ -74,6 +82,8 @@ system_comp_info "display"
 system_comp_info "network"
 system_comp_info "cpu"
 system_comp_info "memory"
+
+
 
 
 exit 0
